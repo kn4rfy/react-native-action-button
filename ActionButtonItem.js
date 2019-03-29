@@ -30,11 +30,8 @@ export default class ActionButtonItem extends PureComponent {
 		return {
 			active: true,
 			buttonColor: '#000',
-			children: null,
 			height: PixelRatio.roundToNearestPixel(37),
 			offsetX: PixelRatio.roundToNearestPixel(30),
-			onPress: () => {},
-			title: '',
 			width: PixelRatio.roundToNearestPixel(56),
 		}
 	}
@@ -43,11 +40,12 @@ export default class ActionButtonItem extends PureComponent {
 		return {
 			active: PropTypes.bool,
 			buttonColor: PropTypes.string,
-			children: PropTypes.arrayOf(PropTypes.element),
+			children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node])
+				.isRequired,
 			height: PropTypes.number,
 			offsetX: PropTypes.number,
-			onPress: PropTypes.func,
-			title: PropTypes.string,
+			onPress: PropTypes.func.isRequired,
+			title: PropTypes.node.isRequired,
 			width: PropTypes.number,
 		}
 	}

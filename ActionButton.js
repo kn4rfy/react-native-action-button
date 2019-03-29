@@ -163,7 +163,7 @@ export default class ActionButton extends Component {
 						{...ActionButton.props}
 						onPress={() => {
 							if (autoInactive) {
-								this.timeout = this.reset.bind(this)
+								this.timeout = this.reset()
 							}
 							ActionButton.props.onPress()
 						}}
@@ -229,16 +229,16 @@ ActionButton.propTypes = {
 	bgColor: PropTypes.string,
 	bgOpacity: PropTypes.number,
 	buttonColor: PropTypes.string,
-	children: PropTypes.arrayOf(PropTypes.element),
+	children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
 	height: PropTypes.number,
 	offsetX: PropTypes.number,
 	offsetY: PropTypes.number,
 	onPress: PropTypes.func,
 	renderIcon: PropTypes.element,
-	resetToken: PropTypes.oneOfType(PropTypes.any),
+	resetToken: PropTypes.oneOfType([PropTypes.any]),
 	size: PropTypes.number,
 	spacing: PropTypes.number,
-	style: PropTypes.oneOfType(PropTypes.object),
+	style: PropTypes.oneOfType([PropTypes.object]),
 	verticalOrientation: PropTypes.oneOf(['up', 'down']),
 	width: PropTypes.number,
 }
