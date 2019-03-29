@@ -1,0 +1,56 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "extends": [
+    "@react-native-community",
+    "airbnb",
+    "eslint:recommended",
+    "prettier",
+    "prettier/react"
+  ],
+  "plugins": [
+    "import",
+    "jsx-a11y",
+    "react"
+  ],
+  "globals": {
+    "__DEV__": true,
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "rules": {
+    "global-require": "off",
+    "no-console": "warn",
+    "no-mixed-operators": "warn",
+    "no-unused-vars": "warn",
+    "no-use-before-define": "warn",
+    "prefer-destructuring": "warn",
+    "semi": [
+      "error",
+      "never"
+    ],
+    "import/first": "warn",
+    "react/destructuring-assignment": "warn",
+    "react/jsx-curly-brace-presence": [
+      "warn",
+      {
+        "props": "always",
+        "children": "never"
+      }
+    ],
+    "react/jsx-filename-extension": "off",
+    "react/prop-types": "warn",
+    "react-native/no-inline-styles": "warn"
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true,
+      "legacyDecorators": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  }
+}

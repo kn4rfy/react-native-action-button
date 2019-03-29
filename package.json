@@ -4,7 +4,9 @@
   "description": "customizable multi-action-button component for react-native",
   "main": "ActionButton.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prettier": "prettier --write --single-quote --no-semi --trailing-comma es5 --print-width 100 --tab-width 4 --use-tabs \"*.js\"",
+    "lint": "eslint .",
+    "format": "yarn prettier"
   },
   "repository": {
     "type": "git",
@@ -16,9 +18,7 @@
     "float-button",
     "multi-action-button"
   ],
-  "peerDependencies": {
-    "react-native": ">=0.11"
-  },
+  "peerDependencies": {},
   "author": "Yousef Kamawall",
   "license": "MIT",
   "bugs": {
@@ -26,6 +26,17 @@
   },
   "homepage": "https://github.com/mastermoo/react-native-action-button",
   "dependencies": {
-    "prop-types": "^15.5.10"
+    "prop-types": "^15.7.2"
+  },
+  "devDependencies": {
+    "@react-native-community/eslint-config": "^0.0.3",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.15.3",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "prettier": "^1.16.4"
   }
 }
